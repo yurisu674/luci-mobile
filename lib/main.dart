@@ -7,6 +7,7 @@ import 'package:workmanager/workmanager.dart';
 import 'package:luci_mobile/services/background_worker.dart';
 import 'package:luci_mobile/utils/logger.dart';
 
+import 'package:luci_mobile/design/furry_theme.dart';
 import 'package:luci_mobile/state/app_state_provider.dart';
 import 'package:luci_mobile/l10n/app_localizations.dart';
 import 'package:luci_mobile/l10n/luci_localizations.dart';
@@ -54,29 +55,8 @@ class LuCIApp extends ConsumerWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       localeListResolutionCallback: (locales, supported) =>
           resolveLuciLocale(locales, supported) ?? supported.first,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-        // Edge-to-edge display handled natively in MainActivity
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          scrolledUnderElevation: 0,
-        ),
-      ),
-      darkTheme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
-          brightness: Brightness.dark,
-        ),
-        useMaterial3: true,
-        // Edge-to-edge display handled natively in MainActivity
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          scrolledUnderElevation: 0,
-        ),
-      ),
+      theme: FurryTheme.lightTheme(),
+      darkTheme: FurryTheme.darkTheme(),
       themeMode: appState.themeMode,
       initialRoute: '/splash',
       routes: {
