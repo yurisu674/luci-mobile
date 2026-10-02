@@ -59,7 +59,7 @@ class FurryTheme {
         ),
       ),
       // Card styling
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: FurryColors.lightSurface,
         elevation: 2,
         margin: EdgeInsets.zero,
@@ -179,7 +179,7 @@ class FurryTheme {
         ),
       ),
       // Dialog styling
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: FurryColors.lightSurface,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(28),
@@ -262,7 +262,7 @@ class FurryTheme {
         ),
       ),
       // Card styling
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: FurryColors.darkSurface,
         elevation: 2,
         margin: EdgeInsets.zero,
@@ -382,7 +382,7 @@ class FurryTheme {
         ),
       ),
       // Dialog styling
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: FurryColors.darkSurface,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(28),
