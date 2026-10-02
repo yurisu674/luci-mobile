@@ -1,10 +1,10 @@
-name: Release
+name: Build Android
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'
-
 concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: true
